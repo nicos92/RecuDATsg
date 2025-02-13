@@ -16,5 +16,10 @@ namespace RecuDATsg.Vistas
         {
             InitializeComponent();
         }
+
+        private void IngresoDat_Load(object sender, EventArgs e)
+        {
+            TxtArchivo.Focus();
+        }
     }
 }

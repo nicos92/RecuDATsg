@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +50,21 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Varios\ColoresARGB.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form1RecuDat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form1RecuDat.Designer.cs">
+      <DependentUpon>Form1RecuDat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Varios\MiTextPosition.cs" />
     <Compile Include="Varios\NSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Varios\NSProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Varios\NSTextBox.cs">
@@ -76,8 +87,8 @@
     <Compile Include="Vistas\IngresoDat.Designer.cs">
       <DependentUpon>IngresoDat.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form1RecuDat.resx">
+      <DependentUpon>Form1RecuDat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Varios\NSTextBox.resx">
       <DependentUpon>NSTextBox.cs</DependentUpon>
@@ -94,6 +105,10 @@
     <EmbeddedResource Include="Vistas\BuscarDat.resx">
       <DependentUpon>BuscarDat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\IngresoDat.resx">
+      <DependentUpon>IngresoDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -15,18 +15,28 @@ namespace DataAccess
         private readonly NpgsqlConnection _connection;
 
 
-        //private const string Host = "192.168.0.189";
-        private const string Host = "Localhost";
+        private const string Host = "192.168.0.189";
+        //private const string Host = "Localhost";
         private const string Port = "62354";
         private const string Username = "postgres";
         private const string Password = "athena_4116";
-        private const string Database = "SGGeneral";
+        private const string Database = "sggeneral";
 
         private const string connString = "Host=" + Host + ";Port=" + Port + ";Username=" + Username + ";Password=" + Password + ";Database=" + Database + ";MaxPoolSize=200;";
 
         private BDNpgsql()
         {
+            try
+            {
+
             _connection = new NpgsqlConnection(connString);
+            }
+            catch (NpgsqlException ex)
+            {
+
+                NSMessageBox.NSMessageBox mensaje = new NSMessageBox.NSMessageBox();
+                mensaje.ShowDialog("Error NpgsqlConnection", ex.Message, NSMessageBox.Iconos.Cross, NSMessageBox.Botones.Aceptar);
+            }
         }
 
         public static BDNpgsql Instance
@@ -71,29 +81,23 @@ namespace DataAccess
 
         public async Task<NpgsqlConnection> GetConnectionAsync()
         {
-            try
-            {
+            
 
                 if (_connection.State != System.Data.ConnectionState.Open)
                 await _connection.OpenAsync();
-            }
-            catch (NpgsqlException e)
-            {
-                NSMessageBox.NSMessageBox mensaje = new NSMessageBox.NSMessageBox();
-                mensaje.ShowDialog("Error al conectar con Base de Datos", e.Message, NSMessageBox.Iconos.Cross, NSMessageBox.Botones.Aceptar);
-                return null;
-            }
+            
+            
             return _connection;
 
         }
 
-        public void CloseConnection()
+        public async void CloseConnection()
         {
             try
             {
 
                 if (_connection.State != System.Data.ConnectionState.Closed)
-                    _connection.Close();
+                    await _connection.CloseAsync();
             }
             catch (InvalidOperationException e)
             {

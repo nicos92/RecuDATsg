@@ -11,39 +11,50 @@ namespace Data.DAO
 {
     public class DatDao
     {
+        private readonly NSMessageBox.NSMessageBox mensaje = new NSMessageBox.NSMessageBox();
         public async Task<List<string[]>> GetAllArchivos()
         {
             List<string[]> mistrings = new List<string[]>();
             DatModel model;
-            using (var con = await BDNpgsql.Instance.GetConnectionAsync())
+            try
             {
-                using (var command = new NpgsqlCommand())
+                string sql = "select id, archivo, sector, cartelerror, observacion from archivosdat;";
+                using (var con = await BDNpgsql.Instance.GetConnectionAsync())           
                 {
-                    command.CommandText = "select * from archivosdat";
-                    NpgsqlDataReader reader = await command.ExecuteReaderAsync();
-                    if (reader.HasRows)
+                    using (var command = new NpgsqlCommand(sql, con))
                     {
-
-                        while (await reader.ReadAsync())
+                        using (NpgsqlDataReader reader = await command.ExecuteReaderAsync())
                         {
-                        string[] list2 = new string[5];
-                            model = new DatModel(reader.GetInt64(0),
-                                 reader.GetString(1),
-                               reader.GetString(2),
-                                reader.GetString(3),
-                                reader.GetString(4)
-                                );
+                            while (await reader.ReadAsync())
+                            {
+                                string[] list2 = new string[5];
+                                model = new DatModel(
+                                    reader.GetInt64(0),
+                                    reader.GetString(1),
+                                    reader.GetString(2),
+                                    reader.GetString(3),
+                                    reader.GetString(4)
+                                    );
 
-                            list2[0] = model.Id.ToString();
-                            list2[1] = model.Archivo;
-                            list2[2] = model.Sector;
-                            list2[3] = model.Error;
-                            list2[4] = model.Observacion;
-                            mistrings.Add(list2);
+                                list2[0] = model.Id.ToString();
+                                list2[1] = model.Archivo;
+                                list2[2] = model.Sector;
+                                list2[3] = model.Error;
+                                list2[4] = model.Observacion;
+                                mistrings.Add(list2);
+                            }
                         }
                     }
                 }
             }
+            catch (NpgsqlException ex)
+            {
+                mensaje.ShowDialog("Error base de datos", ex.Message, NSMessageBox.Iconos.Cross, NSMessageBox.Botones.Aceptar);
+
+            }
+            catch (Exception ex) { mensaje.ShowDialog("Exception", ex.Message, NSMessageBox.Iconos.Cross, NSMessageBox.Botones.Aceptar); }
+
+
 
             return mistrings;
         }

@@ -15,10 +15,10 @@ namespace Controles
     {
 
         //Fields
-        private Color borderColor = Color.MediumSlateBlue;
+        private Color borderColor = Color.FromArgb(255, 108, 117, 125);
         private int borderSize = 2;
         private bool underLinesStyle = false;
-        private Color borderFocusColor = Color.HotPink;
+        private Color borderFocusColor = Color.FromArgb(255, 0, 123, 255);
         private bool isFocused = false;
 
         public NSTextBox()
@@ -54,6 +54,25 @@ namespace Controles
                 underLinesStyle = value; this.Invalidate();
             }
         }
+        [Category("NS Text Box")]
+        public bool ReadOnly
+        {
+            get { return textBox1.ReadOnly; }
+            set
+            {
+                textBox1.ReadOnly = value; 
+            }
+        }
+
+        [Category("NS Text Box")]
+        public int MaxLenght
+        {
+            get { return textBox1.MaxLength; }
+            set
+            {
+                textBox1.MaxLength = value; 
+            }
+        }
 
         // overridden methods
         protected override void OnPaint(PaintEventArgs e)
@@ -68,6 +87,7 @@ namespace Controles
 
                 if (isFocused)
                 {
+                    pen.Color = borderFocusColor;
                     if (underLinesStyle)
                     {
                         g.DrawLine(pen, 0, this.Height - 1, this.Width - 0.5f, this.Height - 1);
@@ -79,7 +99,6 @@ namespace Controles
                 }
                 else
                 {
-                    pen.Color = borderFocusColor;
                     if (underLinesStyle)
                     {
                         g.DrawLine(pen, 0, this.Height - 1, this.Width - 0.5f, this.Height - 1);
@@ -158,7 +177,7 @@ namespace Controles
         // private methods
         private void UpdateControlHeight()
         {
-            if (textBox1.Multiline)
+            if (textBox1.Multiline == false)
             {
                 int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
                 textBox1.Multiline = true;

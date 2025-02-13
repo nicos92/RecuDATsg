@@ -35,17 +35,22 @@ namespace RecuDATsg.Vistas
 
         private void TxtBuscar__TextChanged(object sender, EventArgs e)
         {
-            //datModels = await _datService.GetAllArchivos(TxtBuscar.Text);
+            //_datModels = await _datService.GetAllArchivos(TxtBuscar.Text);
+            //await CargadeArchivotDAT();
         }
 
-        private async void BuscarDat_Load(object sender, EventArgs e)
+        private  void BuscarDat_Load(object sender, EventArgs e)
         {
+            TxtBuscar.Focus();  
             //await CargadeArchivotDAT();
         }
 
         private async Task CargadeArchivotDAT()
         {
+
             _datModels = await _datService.GetAllArchivos();
+
+
             ListViewDAT.Items.Clear();
             foreach (string[] item in _datModels)
             {
