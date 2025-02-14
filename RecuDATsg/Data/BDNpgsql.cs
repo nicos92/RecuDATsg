@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public sealed class BDNpgsql 
+    public sealed class BDNpgsql
     {
         private static BDNpgsql _instance = null;
         private static readonly object _lock = new object();
         private readonly NpgsqlConnection _connection;
 
 
-        private const string Host = "192.168.0.189";
-        //private const string Host = "Localhost";
+        //private const string Host = "192.168.0.189";
+        private const string Host = "Localhost";
         private const string Port = "62354";
         private const string Username = "postgres";
         private const string Password = "athena_4116";
@@ -29,7 +29,7 @@ namespace DataAccess
             try
             {
 
-            _connection = new NpgsqlConnection(connString);
+                _connection = new NpgsqlConnection(connString);
             }
             catch (NpgsqlException ex)
             {
@@ -68,7 +68,8 @@ namespace DataAccess
                     if (_connection.State != System.Data.ConnectionState.Open)
                         _connection.Open();
 
-                }catch(NpgsqlException e)
+                }
+                catch (NpgsqlException e)
                 {
                     NSMessageBox.NSMessageBox mensaje = new NSMessageBox.NSMessageBox();
                     mensaje.ShowDialog("Error al conectar con Base de Datos", e.Message, NSMessageBox.Iconos.Cross, NSMessageBox.Botones.Aceptar);
@@ -81,12 +82,12 @@ namespace DataAccess
 
         public async Task<NpgsqlConnection> GetConnectionAsync()
         {
-            
 
-                if (_connection.State != System.Data.ConnectionState.Open)
+
+            if (_connection.State != System.Data.ConnectionState.Open)
                 await _connection.OpenAsync();
-            
-            
+
+
             return _connection;
 
         }

@@ -61,7 +61,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -129,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vistas\BuscarDat.resx">
       <DependentUpon>BuscarDat.cs</DependentUpon>
@@ -161,6 +162,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8search50.png" />
+    <None Include="Resources\icons8search5024.png" />
+    <None Include="Resources\icons8plus50.png" />
+    <None Include="Resources\icons8plus5024.png" />
+    <None Include="Resources\icons8plus30.png" />
+    <None Include="Resources\icons8plus3024.png" />
+    <None Include="Resources\icons8menu5024.png" />
     <Content Include="Santa Giulia Logo 800 rdn.ico" />
   </ItemGroup>
   <ItemGroup>

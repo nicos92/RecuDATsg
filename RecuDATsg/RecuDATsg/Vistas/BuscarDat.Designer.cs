@@ -39,10 +39,11 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Copy = new Controles.NSButton();
             this.BtnRecover = new Controles.NSButton();
-            this.ProgressBarTop = new Controles.NSProgressBar();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.TxtBuscar = new Controles.NSTextBox();
             this.BtnBuscar = new Controles.NSButton();
+            this.TxtBuscar = new Controles.NSTextBox();
+            this.ProgressBarTop = new Controles.NSProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelFill.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -51,7 +52,7 @@
             // 
             // PanelFill
             // 
-            this.PanelFill.BackColor = System.Drawing.Color.White;
+            this.PanelFill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.PanelFill.Controls.Add(this.tableLayoutPanel1);
             this.PanelFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFill.Location = new System.Drawing.Point(0, 0);
@@ -63,7 +64,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.ListViewDAT, 0, 1);
@@ -81,7 +82,7 @@
             // 
             // ListViewDAT
             // 
-            this.ListViewDAT.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ListViewDAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
             this.ListViewDAT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -89,8 +90,8 @@
             this.columnHeader4,
             this.columnHeader5});
             this.ListViewDAT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListViewDAT.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListViewDAT.ForeColor = System.Drawing.Color.Black;
+            this.ListViewDAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListViewDAT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ListViewDAT.FullRowSelect = true;
             this.ListViewDAT.HideSelection = false;
             this.ListViewDAT.Location = new System.Drawing.Point(16, 80);
@@ -187,6 +188,65 @@
             this.BtnRecover.UseVisualStyleBackColor = false;
             this.BtnRecover.Click += new System.EventHandler(this.BtnRecover_Click);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.BtnBuscar, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TxtBuscar, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(596, 58);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
+            this.BtnBuscar.BorderRadius = 16;
+            this.BtnBuscar.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(471, 5);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(112, 48);
+            this.BtnBuscar.TabIndex = 2;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextColor = System.Drawing.Color.White;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtBuscar.BorderSize = 2;
+            this.TxtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBuscar.Location = new System.Drawing.Point(89, 8);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
+            this.TxtBuscar.MaxLenght = 32;
+            this.TxtBuscar.Multiline = false;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtBuscar.PasswordChar = false;
+            this.TxtBuscar.ReadOnly = false;
+            this.TxtBuscar.Size = new System.Drawing.Size(371, 35);
+            this.TxtBuscar.TabIndex = 2;
+            this.TxtBuscar.UnderLinesStyle = false;
+            // 
             // ProgressBarTop
             // 
             this.ProgressBarTop.ChannelColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
@@ -206,67 +266,23 @@
             this.ProgressBarTop.TabIndex = 3;
             this.ProgressBarTop.Visible = false;
             // 
-            // tableLayoutPanel3
+            // label1
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.97987F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.02013F));
-            this.tableLayoutPanel3.Controls.Add(this.BtnBuscar, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.TxtBuscar, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(596, 58);
-            this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.TxtBuscar.BorderSize = 2;
-            this.TxtBuscar.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.TxtBuscar.Location = new System.Drawing.Point(39, 11);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
-            this.TxtBuscar.MaxLenght = 32;
-            this.TxtBuscar.Multiline = false;
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
-            this.TxtBuscar.PasswordChar = false;
-            this.TxtBuscar.ReadOnly = false;
-            this.TxtBuscar.Size = new System.Drawing.Size(350, 35);
-            this.TxtBuscar.TabIndex = 2;
-            this.TxtBuscar.UnderLinesStyle = true;
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnBuscar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
-            this.BtnBuscar.BorderRadius = 16;
-            this.BtnBuscar.BorderSize = 0;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Location = new System.Drawing.Point(432, 5);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(112, 48);
-            this.BtnBuscar.TabIndex = 2;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.TextColor = System.Drawing.Color.White;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Archivo:";
             // 
             // BuscarDat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.ProgressBarTop);
             this.Controls.Add(this.PanelFill);
             this.Margin = new System.Windows.Forms.Padding(0);
@@ -277,6 +293,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +315,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Controles.NSButton BtnBuscar;
         private Controles.NSTextBox TxtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }

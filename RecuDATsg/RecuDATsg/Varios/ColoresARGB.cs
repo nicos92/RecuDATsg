@@ -17,7 +17,9 @@ namespace Login
         private readonly Color danger = Color.FromArgb(255, 220, 53, 69);
         private readonly Color light = Color.FromArgb(255, 248, 249, 250);
         private readonly Color dark = Color.FromArgb(255, 32, 37, 42);
-        private readonly Color darkBackText = Color.FromArgb(255, 26, 31, 34);
+        private readonly Color darkTwo = Color.FromArgb(255, 22, 27, 32);
+
+        private readonly Color darkBackText = Color.FromArgb(255, 26, 30, 34);
 
         private readonly Color white = Color.FromArgb(255, 254, 254, 254);
         private readonly Color black = Color.FromArgb(255, 16, 16, 16);
@@ -233,6 +235,8 @@ namespace Login
         }
 
         public Color PurpleBootstrap => purpleBootstrap;
+
+        public Color DarkTwo => darkTwo;
 
         public  Color RandomColor()
         {

@@ -25,6 +25,7 @@ namespace RecuDATsg
         {
             //AbrirVentanaBuscarDat();
             MostrarVistas(new BuscarDat());
+            BtnMenu_Click(sender,e);
         }
 
         private void AbrirVentanaBuscarDat()
@@ -61,9 +62,9 @@ namespace RecuDATsg
 
             //BtnVentanaBusqueda.BackColor = _colores.Blue;
             //BtnVentanaBusqueda.ForeColor = _colores.Light;
-            BtnVentanaIngreso.BackColor = Color.WhiteSmoke;
+            BtnVentanaIngreso.BackColor = _colores.Dark;
 
-            BtnVentanaBusqueda.BackColor = Color.White;
+            BtnVentanaBusqueda.BackColor = _colores.Primary;
         }
 
         private void BtnVentanaIngresar_Click(object sender, EventArgs e)
@@ -81,9 +82,9 @@ namespace RecuDATsg
 
         private void CambioColorIngresar()
         {
-            BtnVentanaIngreso.BackColor = Color.White;
+            BtnVentanaIngreso.BackColor = _colores.Purple;
 
-            BtnVentanaBusqueda.BackColor = Color.WhiteSmoke;
+            BtnVentanaBusqueda.BackColor = _colores.Dark;
         }
 
         private void MostrarVistas(UserControl userControl)

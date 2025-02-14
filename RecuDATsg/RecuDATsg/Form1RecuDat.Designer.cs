@@ -41,7 +41,7 @@
             // 
             // PanelLeft
             // 
-            this.PanelLeft.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.PanelLeft.Controls.Add(this.BtnVentanaIngreso);
             this.PanelLeft.Controls.Add(this.BtnVentanaBusqueda);
             this.PanelLeft.Controls.Add(this.BtnMenu);
@@ -82,7 +82,7 @@
             // 
             // PanelFill
             // 
-            this.PanelFill.BackColor = System.Drawing.Color.White;
+            this.PanelFill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.PanelFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFill.Location = new System.Drawing.Point(128, 0);
             this.PanelFill.Margin = new System.Windows.Forms.Padding(8);
@@ -93,8 +93,8 @@
             // 
             // BtnVentanaIngreso
             // 
-            this.BtnVentanaIngreso.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnVentanaIngreso.BackGroudColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnVentanaIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.BtnVentanaIngreso.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.BtnVentanaIngreso.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.BtnVentanaIngreso.BorderRadius = 0;
             this.BtnVentanaIngreso.BorderSize = 0;
@@ -102,24 +102,23 @@
             this.BtnVentanaIngreso.FlatAppearance.BorderSize = 0;
             this.BtnVentanaIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVentanaIngreso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVentanaIngreso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnVentanaIngreso.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnVentanaIngreso.Image = global::RecuDATsg.Properties.Resources.icons8plus3024;
             this.BtnVentanaIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVentanaIngreso.ImageIndex = 14;
-            this.BtnVentanaIngreso.ImageList = this.ImageList;
-            this.BtnVentanaIngreso.Location = new System.Drawing.Point(0, 113);
+            this.BtnVentanaIngreso.Location = new System.Drawing.Point(0, 128);
             this.BtnVentanaIngreso.Name = "BtnVentanaIngreso";
-            this.BtnVentanaIngreso.Size = new System.Drawing.Size(128, 49);
+            this.BtnVentanaIngreso.Size = new System.Drawing.Size(128, 64);
             this.BtnVentanaIngreso.TabIndex = 2;
             this.BtnVentanaIngreso.Text = "Ingresar";
-            this.BtnVentanaIngreso.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnVentanaIngreso.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnVentanaIngreso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnVentanaIngreso.UseVisualStyleBackColor = false;
             this.BtnVentanaIngreso.Click += new System.EventHandler(this.BtnVentanaIngresar_Click);
             // 
             // BtnVentanaBusqueda
             // 
-            this.BtnVentanaBusqueda.BackColor = System.Drawing.Color.White;
-            this.BtnVentanaBusqueda.BackGroudColor = System.Drawing.Color.White;
+            this.BtnVentanaBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnVentanaBusqueda.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.BtnVentanaBusqueda.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.BtnVentanaBusqueda.BorderRadius = 0;
             this.BtnVentanaBusqueda.BorderSize = 0;
@@ -127,24 +126,23 @@
             this.BtnVentanaBusqueda.FlatAppearance.BorderSize = 0;
             this.BtnVentanaBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVentanaBusqueda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVentanaBusqueda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnVentanaBusqueda.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnVentanaBusqueda.Image = global::RecuDATsg.Properties.Resources.icons8search5024;
             this.BtnVentanaBusqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVentanaBusqueda.ImageIndex = 15;
-            this.BtnVentanaBusqueda.ImageList = this.ImageList;
-            this.BtnVentanaBusqueda.Location = new System.Drawing.Point(0, 49);
+            this.BtnVentanaBusqueda.Location = new System.Drawing.Point(0, 64);
             this.BtnVentanaBusqueda.Name = "BtnVentanaBusqueda";
             this.BtnVentanaBusqueda.Size = new System.Drawing.Size(128, 64);
             this.BtnVentanaBusqueda.TabIndex = 1;
             this.BtnVentanaBusqueda.Text = "Buscar";
-            this.BtnVentanaBusqueda.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnVentanaBusqueda.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnVentanaBusqueda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnVentanaBusqueda.UseVisualStyleBackColor = false;
             this.BtnVentanaBusqueda.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnMenu
             // 
-            this.BtnMenu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnMenu.BackGroudColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.BtnMenu.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.BtnMenu.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.BtnMenu.BorderRadius = 0;
             this.BtnMenu.BorderSize = 0;
@@ -152,16 +150,15 @@
             this.BtnMenu.FlatAppearance.BorderSize = 0;
             this.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMenu.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnMenu.Image = global::RecuDATsg.Properties.Resources.icons8menu5024;
             this.BtnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMenu.ImageIndex = 13;
-            this.BtnMenu.ImageList = this.ImageList;
             this.BtnMenu.Location = new System.Drawing.Point(0, 0);
             this.BtnMenu.Name = "BtnMenu";
-            this.BtnMenu.Size = new System.Drawing.Size(128, 49);
+            this.BtnMenu.Size = new System.Drawing.Size(128, 64);
             this.BtnMenu.TabIndex = 0;
             this.BtnMenu.Text = "Menú";
-            this.BtnMenu.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnMenu.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMenu.UseVisualStyleBackColor = false;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
