@@ -56,11 +56,14 @@ namespace RecuDATsg
 
         private void CambioColorBuscar()
         {
-            BtnVentanaIngreso.BackColor = _colores.DarkBackText;
-            BtnVentanaIngreso.ForeColor = _colores.Secondary;
+            //BtnVentanaIngreso.BackColor = _colores.DarkBackText;
+            //BtnVentanaIngreso.ForeColor = _colores.Secondary;
 
-            BtnVentanaBusqueda.BackColor = _colores.Blue;
-            BtnVentanaBusqueda.ForeColor = _colores.Light;
+            //BtnVentanaBusqueda.BackColor = _colores.Blue;
+            //BtnVentanaBusqueda.ForeColor = _colores.Light;
+            BtnVentanaIngreso.BackColor = Color.WhiteSmoke;
+
+            BtnVentanaBusqueda.BackColor = Color.White;
         }
 
         private void BtnVentanaIngresar_Click(object sender, EventArgs e)
@@ -78,20 +81,18 @@ namespace RecuDATsg
 
         private void CambioColorIngresar()
         {
-            BtnVentanaIngreso.BackColor = _colores.Indigo;
-            BtnVentanaIngreso.ForeColor = _colores.Light;
+            BtnVentanaIngreso.BackColor = Color.White;
 
-            BtnVentanaBusqueda.BackColor = _colores.DarkBackText;
-            BtnVentanaBusqueda.ForeColor = _colores.Secondary;
+            BtnVentanaBusqueda.BackColor = Color.WhiteSmoke;
         }
 
         private void MostrarVistas(UserControl userControl)
         {
+            userControl.Size = new Size(PanelFill.Width, PanelFill.Height);
             PanelFill.Controls.Clear();
             PanelFill.Controls.Add(userControl);
             
             userControl.BringToFront();
-            //userControl.Dock = DockStyle.Fill;
 
         }
 
@@ -99,14 +100,15 @@ namespace RecuDATsg
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            /*
-            int pl = 50;
+            
+            int pl = 36;
             if (PanelLeft.Width == pl)
             {
                 PanelLeft.Width = 128;
                 BtnMenu.Text = "Menú";
                 BtnVentanaBusqueda.Text = "Buscar";
                 BtnVentanaIngreso.Text = "Ingresar";
+                PanelFill.Controls[0].Size = new Size(PanelFill.Width, PanelFill.Height);
             }
             else
             {
@@ -114,8 +116,11 @@ namespace RecuDATsg
                 BtnMenu.Text = string.Empty;
                 BtnVentanaBusqueda.Text = string.Empty;
                 BtnVentanaIngreso.Text = string.Empty;
+                PanelFill.Controls[0].Size = new Size(PanelFill.Width, PanelFill.Height);
 
-            }*/
+
+            }
         }
+
     }
 }

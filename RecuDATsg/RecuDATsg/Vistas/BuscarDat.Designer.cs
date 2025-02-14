@@ -48,7 +48,7 @@
             // 
             // PanelFill
             // 
-            this.PanelFill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.PanelFill.BackColor = System.Drawing.Color.White;
             this.PanelFill.Controls.Add(this.tableLayoutPanel1);
             this.PanelFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFill.Location = new System.Drawing.Point(0, 0);
@@ -60,7 +60,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.TxtBuscar, 0, 0);
@@ -79,13 +79,13 @@
             // TxtBuscar
             // 
             this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(34)))));
+            this.TxtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.TxtBuscar.BorderSize = 2;
-            this.TxtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TxtBuscar.Location = new System.Drawing.Point(126, 15);
+            this.TxtBuscar.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.ForeColor = System.Drawing.Color.Black;
+            this.TxtBuscar.Location = new System.Drawing.Point(126, 14);
             this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
             this.TxtBuscar.MaxLenght = 32;
             this.TxtBuscar.Multiline = false;
@@ -93,14 +93,14 @@
             this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
             this.TxtBuscar.PasswordChar = false;
             this.TxtBuscar.ReadOnly = false;
-            this.TxtBuscar.Size = new System.Drawing.Size(350, 34);
+            this.TxtBuscar.Size = new System.Drawing.Size(350, 35);
             this.TxtBuscar.TabIndex = 1;
             this.TxtBuscar.UnderLinesStyle = true;
             this.TxtBuscar._TextChanged += new System.EventHandler(this.TxtBuscar__TextChanged);
             // 
             // ListViewDAT
             // 
-            this.ListViewDAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.ListViewDAT.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ListViewDAT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -108,8 +108,8 @@
             this.columnHeader4,
             this.columnHeader5});
             this.ListViewDAT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListViewDAT.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListViewDAT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ListViewDAT.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListViewDAT.ForeColor = System.Drawing.Color.Black;
             this.ListViewDAT.FullRowSelect = true;
             this.ListViewDAT.HideSelection = false;
             this.ListViewDAT.Location = new System.Drawing.Point(16, 80);
@@ -167,11 +167,11 @@
             // Copy
             // 
             this.Copy.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.Copy.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.Copy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.Copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
+            this.Copy.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
+            this.Copy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
             this.Copy.BorderRadius = 16;
-            this.Copy.BorderSize = 2;
+            this.Copy.BorderSize = 0;
             this.Copy.FlatAppearance.BorderSize = 0;
             this.Copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Copy.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,9 +188,9 @@
             // BtnRecover
             // 
             this.BtnRecover.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnRecover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.BtnRecover.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.BtnRecover.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.BtnRecover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.BtnRecover.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.BtnRecover.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.BtnRecover.BorderRadius = 16;
             this.BtnRecover.BorderSize = 2;
             this.BtnRecover.FlatAppearance.BorderSize = 0;
@@ -223,11 +223,12 @@
             this.ProgressBarTop.SymbolAfter = "";
             this.ProgressBarTop.SymbolBefore = "";
             this.ProgressBarTop.TabIndex = 3;
+            this.ProgressBarTop.Visible = false;
             // 
             // BuscarDat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.ProgressBarTop);
             this.Controls.Add(this.PanelFill);
             this.Margin = new System.Windows.Forms.Padding(0);

@@ -34,6 +34,9 @@ namespace Login
         private readonly Color cyan = Color.FromArgb(255, 23, 162, 184);
         private readonly Color verdeConsola = Color.FromArgb(255, 0, 204, 0);
 
+        private readonly Color purpleBootstrap = Color.FromArgb(101, 40, 224);
+
+
         private Color[] coloresRand;
         public ColoresARGB()
         {
@@ -228,6 +231,8 @@ namespace Login
                 coloresRand = value;
             }
         }
+
+        public Color PurpleBootstrap => purpleBootstrap;
 
         public  Color RandomColor()
         {
