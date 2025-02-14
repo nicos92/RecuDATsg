@@ -30,7 +30,6 @@
         {
             this.PanelFill = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TxtBuscar = new Controles.NSTextBox();
             this.ListViewDAT = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,9 +40,13 @@
             this.Copy = new Controles.NSButton();
             this.BtnRecover = new Controles.NSButton();
             this.ProgressBarTop = new Controles.NSProgressBar();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.TxtBuscar = new Controles.NSTextBox();
+            this.BtnBuscar = new Controles.NSButton();
             this.PanelFill.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFill
@@ -63,9 +66,9 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.TxtBuscar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ListViewDAT, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 16);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -75,28 +78,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(602, 429);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.TxtBuscar.BorderSize = 2;
-            this.TxtBuscar.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.TxtBuscar.Location = new System.Drawing.Point(126, 14);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
-            this.TxtBuscar.MaxLenght = 32;
-            this.TxtBuscar.Multiline = false;
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
-            this.TxtBuscar.PasswordChar = false;
-            this.TxtBuscar.ReadOnly = false;
-            this.TxtBuscar.Size = new System.Drawing.Size(350, 35);
-            this.TxtBuscar.TabIndex = 1;
-            this.TxtBuscar.UnderLinesStyle = true;
-            this.TxtBuscar._TextChanged += new System.EventHandler(this.TxtBuscar__TextChanged);
             // 
             // ListViewDAT
             // 
@@ -117,7 +98,7 @@
             this.ListViewDAT.MultiSelect = false;
             this.ListViewDAT.Name = "ListViewDAT";
             this.ListViewDAT.Size = new System.Drawing.Size(570, 268);
-            this.ListViewDAT.TabIndex = 2;
+            this.ListViewDAT.TabIndex = 3;
             this.ListViewDAT.UseCompatibleStateImageBehavior = false;
             this.ListViewDAT.View = System.Windows.Forms.View.Details;
             // 
@@ -179,7 +160,7 @@
             this.Copy.Location = new System.Drawing.Point(122, 5);
             this.Copy.Name = "Copy";
             this.Copy.Size = new System.Drawing.Size(112, 48);
-            this.Copy.TabIndex = 3;
+            this.Copy.TabIndex = 4;
             this.Copy.Text = "Copy";
             this.Copy.TextColor = System.Drawing.Color.White;
             this.Copy.UseVisualStyleBackColor = false;
@@ -200,7 +181,7 @@
             this.BtnRecover.Location = new System.Drawing.Point(360, 5);
             this.BtnRecover.Name = "BtnRecover";
             this.BtnRecover.Size = new System.Drawing.Size(112, 48);
-            this.BtnRecover.TabIndex = 4;
+            this.BtnRecover.TabIndex = 5;
             this.BtnRecover.Text = "Recover1";
             this.BtnRecover.TextColor = System.Drawing.Color.White;
             this.BtnRecover.UseVisualStyleBackColor = false;
@@ -225,6 +206,63 @@
             this.ProgressBarTop.TabIndex = 3;
             this.ProgressBarTop.Visible = false;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.97987F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.02013F));
+            this.tableLayoutPanel3.Controls.Add(this.BtnBuscar, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TxtBuscar, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(596, 58);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtBuscar.BorderSize = 2;
+            this.TxtBuscar.Font = new System.Drawing.Font("SUSE", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.ForeColor = System.Drawing.Color.Black;
+            this.TxtBuscar.Location = new System.Drawing.Point(39, 11);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
+            this.TxtBuscar.MaxLenght = 32;
+            this.TxtBuscar.Multiline = false;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtBuscar.PasswordChar = false;
+            this.TxtBuscar.ReadOnly = false;
+            this.TxtBuscar.Size = new System.Drawing.Size(350, 35);
+            this.TxtBuscar.TabIndex = 2;
+            this.TxtBuscar.UnderLinesStyle = true;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
+            this.BtnBuscar.BorderRadius = 16;
+            this.BtnBuscar.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(432, 5);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(112, 48);
+            this.BtnBuscar.TabIndex = 2;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextColor = System.Drawing.Color.White;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // BuscarDat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -238,6 +276,7 @@
             this.PanelFill.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -246,7 +285,6 @@
 
         private System.Windows.Forms.Panel PanelFill;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Controles.NSTextBox TxtBuscar;
         private System.Windows.Forms.ListView ListViewDAT;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Controles.NSButton Copy;
@@ -257,5 +295,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Controles.NSButton BtnBuscar;
+        private Controles.NSTextBox TxtBuscar;
     }
 }

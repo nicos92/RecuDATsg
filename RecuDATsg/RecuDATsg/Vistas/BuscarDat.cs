@@ -39,20 +39,20 @@ namespace RecuDATsg.Vistas
             //await CargadeArchivotDAT();
         }
 
-        private  void BuscarDat_Load(object sender, EventArgs e)
+        private async void BuscarDat_Load(object sender, EventArgs e)
         {
+            _datModels = await _datService.GetAllArchivos();
+             CargadeArchivotDAT(_datModels);
             TxtBuscar.Focus();  
-            //await CargadeArchivotDAT();
         }
 
-        private async Task CargadeArchivotDAT()
+        private  void CargadeArchivotDAT(IEnumerable<String[]> listaString)
         {
 
-            _datModels = await _datService.GetAllArchivos();
 
 
             ListViewDAT.Items.Clear();
-            foreach (string[] item in _datModels)
+            foreach (string[] item in listaString)
             {
 
                 // Simula una tarea larga
@@ -62,6 +62,20 @@ namespace RecuDATsg.Vistas
 
 
             }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            var filtrados = from dat in _datModels
+                            where dat[3].Contains(TxtBuscar.Text) 
+                            select dat;
+
+
+            foreach (var item in filtrados)
+            {
+                Console.WriteLine(  item.ToString());
+            }
+            CargadeArchivotDAT(filtrados);
         }
     }
 }
