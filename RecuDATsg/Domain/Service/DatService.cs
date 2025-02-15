@@ -18,11 +18,11 @@ namespace Domain.Service
             return await datDao.GetAllArchivos();
         }
 
-        public async Task<bool> InsertDat(string archivo, string sector, string error, string observacion)
-        {
-            DatModel datModel = new DatModel(archivo, sector, error, observacion);
+        
 
-            return await datDao.InsertarDAT(datModel.Archivo, datModel.Sector, datModel.Error, datModel.Observacion);
+        public async Task<bool> InsertDat(DatModel datModel)
+        {
+            return await datDao.InsertarDAT(datModel);
         }
     }
 }

@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1RecuDat));
             this.PanelLeft = new System.Windows.Forms.Panel();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.PanelFill = new System.Windows.Forms.Panel();
             this.BtnVentanaIngreso = new Controles.NSButton();
             this.BtnVentanaBusqueda = new Controles.NSButton();
             this.BtnMenu = new Controles.NSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.PanelFill = new System.Windows.Forms.Panel();
             this.PanelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,45 +51,6 @@
             this.PanelLeft.Name = "PanelLeft";
             this.PanelLeft.Size = new System.Drawing.Size(128, 461);
             this.PanelLeft.TabIndex = 0;
-            // 
-            // ImageList
-            // 
-            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
-            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList.Images.SetKeyName(0, "bars-solid (1).png");
-            this.ImageList.Images.SetKeyName(1, "plus-solid (1).png");
-            this.ImageList.Images.SetKeyName(2, "search-solid (1).png");
-            this.ImageList.Images.SetKeyName(3, "bars-solidv.ico");
-            this.ImageList.Images.SetKeyName(4, "bars-solidg.ico");
-            this.ImageList.Images.SetKeyName(5, "bars-solid (1) (Personalizado).png");
-            this.ImageList.Images.SetKeyName(6, "bars-solid (1) (Personalizado) (1).png");
-            this.ImageList.Images.SetKeyName(7, "bars-solid (1) (Personalizado) (2).png");
-            this.ImageList.Images.SetKeyName(8, "icons8búsqueda24.png");
-            this.ImageList.Images.SetKeyName(9, "icons8mas24.png");
-            this.ImageList.Images.SetKeyName(10, "icons8menu24.png");
-            this.ImageList.Images.SetKeyName(11, "icons8mas128.png");
-            this.ImageList.Images.SetKeyName(12, "search.png");
-            this.ImageList.Images.SetKeyName(13, "bars-solid.png");
-            this.ImageList.Images.SetKeyName(14, "plus-solid.png");
-            this.ImageList.Images.SetKeyName(15, "search-solid.png");
-            this.ImageList.Images.SetKeyName(16, "bars-solid (1) (Personalizado) (3).png");
-            this.ImageList.Images.SetKeyName(17, "plus-solid (1) (Personalizado).png");
-            this.ImageList.Images.SetKeyName(18, "search-solid (1) (Personalizado).png");
-            this.ImageList.Images.SetKeyName(19, "icons8-búsqueda-24.png");
-            this.ImageList.Images.SetKeyName(20, "icons8-búsqueda-50.png");
-            this.ImageList.Images.SetKeyName(21, "icons8-búsqueda-24(1).png");
-            this.ImageList.Images.SetKeyName(22, "icons8-búsqueda-50(1).png");
-            // 
-            // PanelFill
-            // 
-            this.PanelFill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.PanelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFill.Location = new System.Drawing.Point(128, 0);
-            this.PanelFill.Margin = new System.Windows.Forms.Padding(8);
-            this.PanelFill.Name = "PanelFill";
-            this.PanelFill.Padding = new System.Windows.Forms.Padding(16);
-            this.PanelFill.Size = new System.Drawing.Size(656, 461);
-            this.PanelFill.TabIndex = 1;
             // 
             // BtnVentanaIngreso
             // 
@@ -162,6 +123,45 @@
             this.BtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMenu.UseVisualStyleBackColor = false;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
+            // ImageList
+            // 
+            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
+            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList.Images.SetKeyName(0, "bars-solid (1).png");
+            this.ImageList.Images.SetKeyName(1, "plus-solid (1).png");
+            this.ImageList.Images.SetKeyName(2, "search-solid (1).png");
+            this.ImageList.Images.SetKeyName(3, "bars-solidv.ico");
+            this.ImageList.Images.SetKeyName(4, "bars-solidg.ico");
+            this.ImageList.Images.SetKeyName(5, "bars-solid (1) (Personalizado).png");
+            this.ImageList.Images.SetKeyName(6, "bars-solid (1) (Personalizado) (1).png");
+            this.ImageList.Images.SetKeyName(7, "bars-solid (1) (Personalizado) (2).png");
+            this.ImageList.Images.SetKeyName(8, "icons8búsqueda24.png");
+            this.ImageList.Images.SetKeyName(9, "icons8mas24.png");
+            this.ImageList.Images.SetKeyName(10, "icons8menu24.png");
+            this.ImageList.Images.SetKeyName(11, "icons8mas128.png");
+            this.ImageList.Images.SetKeyName(12, "search.png");
+            this.ImageList.Images.SetKeyName(13, "bars-solid.png");
+            this.ImageList.Images.SetKeyName(14, "plus-solid.png");
+            this.ImageList.Images.SetKeyName(15, "search-solid.png");
+            this.ImageList.Images.SetKeyName(16, "bars-solid (1) (Personalizado) (3).png");
+            this.ImageList.Images.SetKeyName(17, "plus-solid (1) (Personalizado).png");
+            this.ImageList.Images.SetKeyName(18, "search-solid (1) (Personalizado).png");
+            this.ImageList.Images.SetKeyName(19, "icons8-búsqueda-24.png");
+            this.ImageList.Images.SetKeyName(20, "icons8-búsqueda-50.png");
+            this.ImageList.Images.SetKeyName(21, "icons8-búsqueda-24(1).png");
+            this.ImageList.Images.SetKeyName(22, "icons8-búsqueda-50(1).png");
+            // 
+            // PanelFill
+            // 
+            this.PanelFill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.PanelFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFill.Location = new System.Drawing.Point(128, 0);
+            this.PanelFill.Margin = new System.Windows.Forms.Padding(8);
+            this.PanelFill.Name = "PanelFill";
+            this.PanelFill.Padding = new System.Windows.Forms.Padding(16);
+            this.PanelFill.Size = new System.Drawing.Size(656, 461);
+            this.PanelFill.TabIndex = 1;
             // 
             // Form1RecuDat
             // 

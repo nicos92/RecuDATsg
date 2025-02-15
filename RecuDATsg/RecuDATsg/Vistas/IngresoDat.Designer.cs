@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresoDat));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LblTitulo = new System.Windows.Forms.Label();
-            this.BtnIngresar = new Controles.NSButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.nsTextBox2 = new Controles.NSTextBox();
-            this.nsTextBox1 = new Controles.NSTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtArchivo = new Controles.NSTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.ComBoxSectores = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.nsTextBox3 = new Controles.NSTextBox();
+            this.ErrorSector = new System.Windows.Forms.ErrorProvider(this.components);
             this.ProgressBarTop = new Controles.NSProgressBar();
+            this.BtnIngresar = new Controles.NSButton();
+            this.TxtCartelError = new Controles.NSTextBox();
+            this.TxtArchivo = new Controles.NSTextBox();
+            this.TxtObservacion = new Controles.NSTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorSector)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,27 +85,6 @@
             this.LblTitulo.TabIndex = 0;
             this.LblTitulo.Text = "INGRESO ARCHIVO DAT";
             // 
-            // BtnIngresar
-            // 
-            this.BtnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnIngresar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnIngresar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnIngresar.BorderRadius = 40;
-            this.BtnIngresar.BorderSize = 0;
-            this.BtnIngresar.FlatAppearance.BorderSize = 0;
-            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.BtnIngresar.Location = new System.Drawing.Point(242, 396);
-            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(16);
-            this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(150, 49);
-            this.BtnIngresar.TabIndex = 5;
-            this.BtnIngresar.Text = "Ingresar";
-            this.BtnIngresar.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.BtnIngresar.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -121,12 +104,12 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.nsTextBox2, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.nsTextBox1, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.TxtCartelError, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.TxtArchivo, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.ComBoxSectores, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -140,114 +123,68 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(308, 311);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // nsTextBox2
-            // 
-            this.nsTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nsTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
-            this.nsTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.nsTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.nsTextBox2.BorderSize = 2;
-            this.nsTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsTextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nsTextBox2.Location = new System.Drawing.Point(20, 263);
-            this.nsTextBox2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.nsTextBox2.MaxLenght = 32767;
-            this.nsTextBox2.Multiline = false;
-            this.nsTextBox2.Name = "nsTextBox2";
-            this.nsTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.nsTextBox2.PasswordChar = false;
-            this.nsTextBox2.ReadOnly = false;
-            this.nsTextBox2.Size = new System.Drawing.Size(268, 35);
-            this.nsTextBox2.TabIndex = 3;
-            this.nsTextBox2.UnderLinesStyle = false;
-            // 
-            // nsTextBox1
-            // 
-            this.nsTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nsTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
-            this.nsTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.nsTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.nsTextBox1.BorderSize = 2;
-            this.nsTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsTextBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nsTextBox1.Location = new System.Drawing.Point(20, 159);
-            this.nsTextBox1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.nsTextBox1.MaxLenght = 32767;
-            this.nsTextBox1.Multiline = false;
-            this.nsTextBox1.Name = "nsTextBox1";
-            this.nsTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.nsTextBox1.PasswordChar = false;
-            this.nsTextBox1.ReadOnly = false;
-            this.nsTextBox1.Size = new System.Drawing.Size(268, 35);
-            this.nsTextBox1.TabIndex = 2;
-            this.nsTextBox1.UnderLinesStyle = false;
-            // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(16, 125);
+            this.label2.Location = new System.Drawing.Point(16, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(16, 16, 16, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.Size = new System.Drawing.Size(276, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Sector:";
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(16, 23);
+            this.label1.Location = new System.Drawing.Point(16, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(276, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Archivo:";
             // 
-            // TxtArchivo
-            // 
-            this.TxtArchivo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
-            this.TxtArchivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.TxtArchivo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.TxtArchivo.BorderSize = 2;
-            this.TxtArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtArchivo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtArchivo.Location = new System.Drawing.Point(20, 57);
-            this.TxtArchivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.TxtArchivo.MaxLenght = 32767;
-            this.TxtArchivo.Multiline = false;
-            this.TxtArchivo.Name = "TxtArchivo";
-            this.TxtArchivo.Padding = new System.Windows.Forms.Padding(7);
-            this.TxtArchivo.PasswordChar = false;
-            this.TxtArchivo.ReadOnly = false;
-            this.TxtArchivo.Size = new System.Drawing.Size(268, 35);
-            this.TxtArchivo.TabIndex = 1;
-            this.TxtArchivo.UnderLinesStyle = false;
-            // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(16, 227);
+            this.label3.Location = new System.Drawing.Point(16, 235);
             this.label3.Margin = new System.Windows.Forms.Padding(16, 16, 16, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(276, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Cartel Error:";
+            // 
+            // ComBoxSectores
+            // 
+            this.ComBoxSectores.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ComBoxSectores.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ComBoxSectores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.ComBoxSectores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ComBoxSectores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ComBoxSectores.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComBoxSectores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ComBoxSectores.FormattingEnabled = true;
+            this.ComBoxSectores.Location = new System.Drawing.Point(8, 161);
+            this.ComBoxSectores.Margin = new System.Windows.Forms.Padding(8, 8, 32, 8);
+            this.ComBoxSectores.Name = "ComBoxSectores";
+            this.ComBoxSectores.Size = new System.Drawing.Size(268, 26);
+            this.ComBoxSectores.TabIndex = 2;
+            this.ComBoxSectores.TextChanged += new System.EventHandler(this.ComBoxSectores_TextChanged);
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.nsTextBox3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.TxtObservacion, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(317, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -271,26 +208,10 @@
             this.label4.Text = "Observaciones:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // nsTextBox3
+            // ErrorSector
             // 
-            this.nsTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
-            this.nsTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.nsTextBox3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.nsTextBox3.BorderSize = 2;
-            this.nsTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nsTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsTextBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nsTextBox3.Location = new System.Drawing.Point(20, 72);
-            this.nsTextBox3.Margin = new System.Windows.Forms.Padding(20);
-            this.nsTextBox3.MaxLenght = 256;
-            this.nsTextBox3.Multiline = true;
-            this.nsTextBox3.Name = "nsTextBox3";
-            this.nsTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.nsTextBox3.PasswordChar = false;
-            this.nsTextBox3.ReadOnly = false;
-            this.nsTextBox3.Size = new System.Drawing.Size(268, 219);
-            this.nsTextBox3.TabIndex = 4;
-            this.nsTextBox3.UnderLinesStyle = false;
+            this.ErrorSector.ContainerControl = this;
+            this.ErrorSector.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorSector.Icon")));
             // 
             // ProgressBarTop
             // 
@@ -312,6 +233,97 @@
             this.ProgressBarTop.TabIndex = 4;
             this.ProgressBarTop.Visible = false;
             // 
+            // BtnIngresar
+            // 
+            this.BtnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.BtnIngresar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.BtnIngresar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnIngresar.BorderRadius = 40;
+            this.BtnIngresar.BorderSize = 0;
+            this.BtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnIngresar.Enabled = false;
+            this.BtnIngresar.FlatAppearance.BorderSize = 0;
+            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIngresar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.BtnIngresar.Location = new System.Drawing.Point(242, 396);
+            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(16);
+            this.BtnIngresar.Name = "BtnIngresar";
+            this.BtnIngresar.Size = new System.Drawing.Size(150, 49);
+            this.BtnIngresar.TabIndex = 5;
+            this.BtnIngresar.Text = "Ingresar";
+            this.BtnIngresar.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.BtnIngresar.UseVisualStyleBackColor = false;
+            this.BtnIngresar.EnabledChanged += new System.EventHandler(this.BtnIngresar_EnabledChanged);
+            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
+            // 
+            // TxtCartelError
+            // 
+            this.TxtCartelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.TxtCartelError.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtCartelError.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtCartelError.BorderSize = 2;
+            this.TxtCartelError.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TxtCartelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCartelError.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtCartelError.Location = new System.Drawing.Point(8, 263);
+            this.TxtCartelError.Margin = new System.Windows.Forms.Padding(8, 8, 32, 8);
+            this.TxtCartelError.MaxLenght = 32767;
+            this.TxtCartelError.Multiline = false;
+            this.TxtCartelError.Name = "TxtCartelError";
+            this.TxtCartelError.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtCartelError.PasswordChar = false;
+            this.TxtCartelError.ReadOnly = false;
+            this.TxtCartelError.Size = new System.Drawing.Size(268, 35);
+            this.TxtCartelError.TabIndex = 3;
+            this.TxtCartelError.UnderLinesStyle = false;
+            this.TxtCartelError._TextChanged += new System.EventHandler(this.TxtCartelError__TextChanged);
+            // 
+            // TxtArchivo
+            // 
+            this.TxtArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.TxtArchivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtArchivo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtArchivo.BorderSize = 2;
+            this.TxtArchivo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TxtArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtArchivo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtArchivo.Location = new System.Drawing.Point(8, 59);
+            this.TxtArchivo.Margin = new System.Windows.Forms.Padding(8, 8, 32, 8);
+            this.TxtArchivo.MaxLenght = 32767;
+            this.TxtArchivo.Multiline = false;
+            this.TxtArchivo.Name = "TxtArchivo";
+            this.TxtArchivo.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtArchivo.PasswordChar = false;
+            this.TxtArchivo.ReadOnly = false;
+            this.TxtArchivo.Size = new System.Drawing.Size(268, 35);
+            this.TxtArchivo.TabIndex = 1;
+            this.TxtArchivo.UnderLinesStyle = false;
+            this.TxtArchivo._TextChanged += new System.EventHandler(this.TxtArchivo__TextChanged);
+            // 
+            // TxtObservacion
+            // 
+            this.TxtObservacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.TxtObservacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtObservacion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtObservacion.BorderSize = 2;
+            this.TxtObservacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtObservacion.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtObservacion.Location = new System.Drawing.Point(16, 60);
+            this.TxtObservacion.Margin = new System.Windows.Forms.Padding(16, 8, 16, 12);
+            this.TxtObservacion.MaxLenght = 256;
+            this.TxtObservacion.Multiline = true;
+            this.TxtObservacion.Name = "TxtObservacion";
+            this.TxtObservacion.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtObservacion.PasswordChar = false;
+            this.TxtObservacion.ReadOnly = false;
+            this.TxtObservacion.Size = new System.Drawing.Size(276, 239);
+            this.TxtObservacion.TabIndex = 4;
+            this.TxtObservacion.UnderLinesStyle = false;
+            this.TxtObservacion._TextChanged += new System.EventHandler(this.TxtObservacion__TextChanged);
+            // 
             // IngresoDat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -329,6 +341,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorSector)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,11 +357,12 @@
         private Controles.NSTextBox TxtArchivo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Controles.NSTextBox nsTextBox2;
-        private Controles.NSTextBox nsTextBox1;
+        private Controles.NSTextBox TxtCartelError;
         private Controles.NSProgressBar ProgressBarTop;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label4;
-        private Controles.NSTextBox nsTextBox3;
+        private Controles.NSTextBox TxtObservacion;
+        private System.Windows.Forms.ComboBox ComBoxSectores;
+        private System.Windows.Forms.ErrorProvider ErrorSector;
     }
 }

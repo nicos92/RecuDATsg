@@ -63,6 +63,26 @@ namespace RecuDATsg.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8actualizacionesdisponibles50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8actualizacionesdisponibles50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8actualizacionesdisponibles5024 {
+            get {
+                object obj = ResourceManager.GetObject("icons8actualizacionesdisponibles5024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8menu5024 {
             get {
                 object obj = ResourceManager.GetObject("icons8menu5024", resourceCulture);

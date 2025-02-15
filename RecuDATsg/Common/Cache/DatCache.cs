@@ -14,5 +14,8 @@ namespace Common.Cache
         public static string Archivo { get; set; }
         public static string Error { get; set; }
         public static string Observacion { get; set; }
+        public static List<string[]> _datModels = new List<string[]>();
+        
+
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 using Login;
 using RecuDATsg.Vistas;
 
@@ -15,10 +16,10 @@ namespace RecuDATsg
 {
     public partial class Form1RecuDat : Form
     {
-        private readonly ColoresARGB _colores = new ColoresARGB();
         public Form1RecuDat()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,9 +63,9 @@ namespace RecuDATsg
 
             //BtnVentanaBusqueda.BackColor = _colores.Blue;
             //BtnVentanaBusqueda.ForeColor = _colores.Light;
-            BtnVentanaIngreso.BackColor = _colores.Dark;
+            BtnVentanaIngreso.BackColor = Ayudas._colores.Dark;
 
-            BtnVentanaBusqueda.BackColor = _colores.Primary;
+            BtnVentanaBusqueda.BackColor = Ayudas._colores.Primary;
         }
 
         private void BtnVentanaIngresar_Click(object sender, EventArgs e)
@@ -82,9 +83,9 @@ namespace RecuDATsg
 
         private void CambioColorIngresar()
         {
-            BtnVentanaIngreso.BackColor = _colores.Purple;
+            BtnVentanaIngreso.BackColor = Ayudas._colores.Purple;
 
-            BtnVentanaBusqueda.BackColor = _colores.Dark;
+            BtnVentanaBusqueda.BackColor = Ayudas._colores.Dark;
         }
 
         private void MostrarVistas(UserControl userControl)

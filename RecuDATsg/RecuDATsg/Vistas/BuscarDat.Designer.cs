@@ -37,13 +37,14 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ProgressBarTop = new Controles.NSProgressBar();
             this.Copy = new Controles.NSButton();
             this.BtnRecover = new Controles.NSButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnBuscar = new Controles.NSButton();
+            this.BtnRefresh = new Controles.NSButton();
             this.TxtBuscar = new Controles.NSTextBox();
-            this.ProgressBarTop = new Controles.NSProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new Controles.NSButton();
             this.PanelFill.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -111,17 +112,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "ARCHIVO";
-            this.columnHeader2.Width = 86;
+            this.columnHeader2.Width = 128;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "SECTOR";
-            this.columnHeader3.Width = 128;
+            this.columnHeader3.Width = 196;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "ERROR";
-            this.columnHeader4.Width = 128;
+            this.columnHeader4.Text = "CARTEL ERROR";
+            this.columnHeader4.Width = 196;
             // 
             // columnHeader5
             // 
@@ -146,57 +147,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(596, 59);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // Copy
-            // 
-            this.Copy.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
-            this.Copy.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
-            this.Copy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
-            this.Copy.BorderRadius = 16;
-            this.Copy.BorderSize = 0;
-            this.Copy.FlatAppearance.BorderSize = 0;
-            this.Copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Copy.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Copy.ForeColor = System.Drawing.Color.White;
-            this.Copy.Location = new System.Drawing.Point(122, 5);
-            this.Copy.Name = "Copy";
-            this.Copy.Size = new System.Drawing.Size(112, 48);
-            this.Copy.TabIndex = 4;
-            this.Copy.Text = "Copy";
-            this.Copy.TextColor = System.Drawing.Color.White;
-            this.Copy.UseVisualStyleBackColor = false;
-            this.Copy.Click += new System.EventHandler(this.Copy_Click);
-            // 
-            // BtnRecover
-            // 
-            this.BtnRecover.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnRecover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.BtnRecover.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.BtnRecover.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.BtnRecover.BorderRadius = 16;
-            this.BtnRecover.BorderSize = 2;
-            this.BtnRecover.FlatAppearance.BorderSize = 0;
-            this.BtnRecover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRecover.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRecover.ForeColor = System.Drawing.Color.White;
-            this.BtnRecover.Location = new System.Drawing.Point(360, 5);
-            this.BtnRecover.Name = "BtnRecover";
-            this.BtnRecover.Size = new System.Drawing.Size(112, 48);
-            this.BtnRecover.TabIndex = 5;
-            this.BtnRecover.Text = "Recover1";
-            this.BtnRecover.TextColor = System.Drawing.Color.White;
-            this.BtnRecover.UseVisualStyleBackColor = false;
-            this.BtnRecover.Click += new System.EventHandler(this.BtnRecover_Click);
-            // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.BtnBuscar, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.TxtBuscar, 1, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.BtnRefresh, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TxtBuscar, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.BtnBuscar, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -205,47 +166,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(596, 58);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // BtnBuscar
+            // label1
             // 
-            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnBuscar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.BtnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
-            this.BtnBuscar.BorderRadius = 16;
-            this.BtnBuscar.BorderSize = 0;
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Location = new System.Drawing.Point(471, 5);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(112, 48);
-            this.BtnBuscar.TabIndex = 2;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.TextColor = System.Drawing.Color.White;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
-            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.TxtBuscar.BorderSize = 2;
-            this.TxtBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBuscar.Location = new System.Drawing.Point(89, 8);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(8);
-            this.TxtBuscar.MaxLenght = 32;
-            this.TxtBuscar.Multiline = false;
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
-            this.TxtBuscar.PasswordChar = false;
-            this.TxtBuscar.ReadOnly = false;
-            this.TxtBuscar.Size = new System.Drawing.Size(371, 35);
-            this.TxtBuscar.TabIndex = 2;
-            this.TxtBuscar.UnderLinesStyle = false;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(60, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 40);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Palabra Clave:";
             // 
             // ProgressBarTop
             // 
@@ -266,18 +198,115 @@
             this.ProgressBarTop.TabIndex = 3;
             this.ProgressBarTop.Visible = false;
             // 
-            // label1
+            // Copy
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(4, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Archivo:";
+            this.Copy.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
+            this.Copy.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(40)))), ((int)(((byte)(224)))));
+            this.Copy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
+            this.Copy.BorderRadius = 16;
+            this.Copy.BorderSize = 0;
+            this.Copy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Copy.FlatAppearance.BorderSize = 0;
+            this.Copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Copy.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Copy.ForeColor = System.Drawing.Color.White;
+            this.Copy.Location = new System.Drawing.Point(122, 5);
+            this.Copy.Name = "Copy";
+            this.Copy.Size = new System.Drawing.Size(112, 48);
+            this.Copy.TabIndex = 4;
+            this.Copy.Text = "Copy";
+            this.Copy.TextColor = System.Drawing.Color.White;
+            this.Copy.UseVisualStyleBackColor = false;
+            this.Copy.Click += new System.EventHandler(this.Copy_Click);
+            // 
+            // BtnRecover
+            // 
+            this.BtnRecover.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnRecover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.BtnRecover.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.BtnRecover.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.BtnRecover.BorderRadius = 16;
+            this.BtnRecover.BorderSize = 2;
+            this.BtnRecover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRecover.FlatAppearance.BorderSize = 0;
+            this.BtnRecover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRecover.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRecover.ForeColor = System.Drawing.Color.White;
+            this.BtnRecover.Location = new System.Drawing.Point(360, 5);
+            this.BtnRecover.Name = "BtnRecover";
+            this.BtnRecover.Size = new System.Drawing.Size(112, 48);
+            this.BtnRecover.TabIndex = 5;
+            this.BtnRecover.Text = "Recover1";
+            this.BtnRecover.TextColor = System.Drawing.Color.White;
+            this.BtnRecover.UseVisualStyleBackColor = false;
+            this.BtnRecover.Click += new System.EventHandler(this.BtnRecover_Click);
+            // 
+            // BtnRefresh
+            // 
+            this.BtnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(210)))), ((int)(((byte)(242)))));
+            this.BtnRefresh.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(210)))), ((int)(((byte)(242)))));
+            this.BtnRefresh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
+            this.BtnRefresh.BorderRadius = 16;
+            this.BtnRefresh.BorderSize = 0;
+            this.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRefresh.FlatAppearance.BorderSize = 0;
+            this.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRefresh.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefresh.ForeColor = System.Drawing.Color.White;
+            this.BtnRefresh.Image = global::RecuDATsg.Properties.Resources.icons8actualizacionesdisponibles5024;
+            this.BtnRefresh.Location = new System.Drawing.Point(3, 5);
+            this.BtnRefresh.Name = "BtnRefresh";
+            this.BtnRefresh.Size = new System.Drawing.Size(48, 48);
+            this.BtnRefresh.TabIndex = 4;
+            this.BtnRefresh.TextColor = System.Drawing.Color.White;
+            this.BtnRefresh.UseVisualStyleBackColor = false;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(34)))));
+            this.TxtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.TxtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.TxtBuscar.BorderSize = 2;
+            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBuscar.Location = new System.Drawing.Point(143, 13);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
+            this.TxtBuscar.MaxLenght = 32;
+            this.TxtBuscar.Multiline = false;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Padding = new System.Windows.Forms.Padding(7);
+            this.TxtBuscar.PasswordChar = false;
+            this.TxtBuscar.ReadOnly = false;
+            this.TxtBuscar.Size = new System.Drawing.Size(336, 35);
+            this.TxtBuscar.TabIndex = 1;
+            this.TxtBuscar.UnderLinesStyle = false;
+            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BackGroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.BtnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(194)))));
+            this.BtnBuscar.BorderRadius = 16;
+            this.BtnBuscar.BorderSize = 0;
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(501, 5);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(80, 48);
+            this.BtnBuscar.TabIndex = 2;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextColor = System.Drawing.Color.White;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BuscarDat
             // 
@@ -306,6 +335,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Controles.NSButton Copy;
         private Controles.NSButton BtnRecover;
+        private Controles.NSButton BtnRefresh;
         private Controles.NSProgressBar ProgressBarTop;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

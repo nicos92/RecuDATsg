@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
-namespace Login
+namespace Common.Cache
 {
-    public  class ColoresARGB
+    public class ColoresARGB
     {
         private readonly Color primary = Color.FromArgb(255, 0, 123, 255);
         private readonly Color secondary = Color.FromArgb(255, 108, 117, 125);
@@ -36,16 +36,17 @@ namespace Login
         private readonly Color cyan = Color.FromArgb(255, 23, 162, 184);
         private readonly Color verdeConsola = Color.FromArgb(255, 0, 204, 0);
 
-        private readonly Color purpleBootstrap = Color.FromArgb(101, 40, 224);
-        private readonly Color dangerBootstrap = Color.FromArgb(187, 45, 59);
-        private readonly Color successBootstrap = Color.FromArgb(21, 115, 71);
-        private readonly Color infoBootstrap = Color.FromArgb(49, 210, 242);
+        private readonly Color purpleBootstrap = Color.FromArgb(255,101, 40, 224);
+        private readonly Color dangerBootstrap = Color.FromArgb(255,187, 45, 59);
+        private readonly Color successBootstrap = Color.FromArgb(255, 21, 115, 71);
+        private readonly Color infoBootstrap = Color.FromArgb(255, 49, 210, 242);
+
 
 
         private Color[] coloresRand;
         public ColoresARGB()
         {
-            this.coloresRand = new Color[10]{ Blue, Indigo, Purple, Pink, Red, Orange, Yellow, Green, Teal, Cyan };
+            this.coloresRand = new Color[10] { Blue, Indigo, Purple, Pink, Red, Orange, Yellow, Green, Teal, Cyan };
         }
 
         public Color Primary
@@ -247,7 +248,7 @@ namespace Login
 
         public Color InfoBootstrap => infoBootstrap;
 
-        public  Color RandomColor()
+        public Color RandomColor()
         {
             Random Number = new Random();
 
@@ -255,6 +256,5 @@ namespace Login
             return ColoresRand[numberRandom];
         }
     }
-
 
 }

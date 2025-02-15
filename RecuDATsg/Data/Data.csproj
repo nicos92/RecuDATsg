@@ -96,6 +96,7 @@
   <ItemGroup>
     <Compile Include="BDNpgsql.cs" />
     <Compile Include="DAO\DatDao.cs" />
+    <Compile Include="DAO\SectoresDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

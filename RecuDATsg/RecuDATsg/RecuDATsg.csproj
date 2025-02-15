@@ -64,6 +64,10 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NSMessageBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\programacion2\NSMessageBox\NSMessageBox\bin\Debug\NSMessageBox.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -169,6 +173,8 @@
     <None Include="Resources\icons8plus30.png" />
     <None Include="Resources\icons8plus3024.png" />
     <None Include="Resources\icons8menu5024.png" />
+    <None Include="Resources\icons8actualizacionesdisponibles50.png" />
+    <None Include="Resources\icons8actualizacionesdisponibles5024.png" />
     <Content Include="Santa Giulia Logo 800 rdn.ico" />
   </ItemGroup>
   <ItemGroup>
